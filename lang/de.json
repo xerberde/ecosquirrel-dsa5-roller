@@ -1,0 +1,9 @@
+{
+	"I18N.MAINTAINERS": [
+		"xerber"
+	],
+	"xerberdsa5roller.maxDiceCount.name": "Maximale Anzahl von Würfeln aufschläge",
+	"xerberdsa5roller.maxDiceCount.hint": "Die höchste Anzahl von Aufschläge, z.B. 1W6+x, die dargestellt werden sollen.",
+	"xerberdsa5roller.enableFateDice.name": "tobedelete1",
+    "xerberdsa5roller.enableFateDice.hint": "tobedelete2"
+}
