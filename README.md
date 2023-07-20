@@ -3,7 +3,10 @@
 
 The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.
 
+After installation a new button is added to the left bar. When activated a popup will be displayed.
 ![demo_token_icons](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
+From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bonus points.
+![demo_token_icons](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_roll)
 
 ### Installation Instructions
 
