@@ -17,18 +17,18 @@
       "path": "lang/en.json",
       "flags": {}
     },
-	{
+	  {
       "lang": "de",
       "name": "Deutsch",
       "path": "lang/de.json",
       "flags": {}
     }
   ],
-  "manifest": "hhttps://github.com/xerberde/xerbers-dsa5-roller/blob/main/module.json",
+  "manifest": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/module.json",
   "download": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/master.zip",
   "id": "xerbers-dsa5-roller",
   "compatibility": {
-    "minimum": "10",
+    "minimum": "11",
     "verified": "11"
   },
   "authors": [
