@@ -3,7 +3,7 @@
 
 The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.
 
-![demo_token_icons](https://github.com/xerberde/xerbers-dsa5-roller/images/demo_popup.png)
+![demo_token_icons](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
 
 ### Installation Instructions
 
