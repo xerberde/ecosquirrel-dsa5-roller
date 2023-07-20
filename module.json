@@ -2,14 +2,20 @@
   "id": "xerbers-dsa5-roller",
   "title": "xerbers-dsa5-roller",
   "description": "The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.",
+  "authors": [
+    {
+      "name": "xerber",
+      "flags": {}
+    }
+  ],
   "url": "https://github.com/xerberde/xerbers-dsa5-roller",
   "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
   "scripts": [
     "xerbers-dsa5-roller.js"
-  ],
-  "styles": [
-    "css/xerbers-dsa5-roller.css",
-    "css/dicefont.css"
   ],
   "languages": [
     {
@@ -25,17 +31,11 @@
       "flags": {}
     }
   ],
+  "styles": [
+    "css/xerbers-dsa5-roller.css",
+    "css/dicefont.css"
+  ],
+  "socket":true,
   "manifest": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/module.json",
-  "download": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/master.zip",
-  "id": "xerbers-dsa5-roller",
-  "compatibility": {
-    "minimum": "11",
-    "verified": "11"
-  },
-  "authors": [
-    {
-      "name": "xerber",
-      "flags": {}
-    }
-  ]
+  "download": "https://github.com/xerberde/xerbers-dsa5-roller/archive/refs/heads/main.zip"
 }
