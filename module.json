@@ -24,8 +24,8 @@
       "flags": {}
     }
   ],
-  "manifest": "https://github.com/xerberde/xerbers-dsa5-roller/module.json",
-  "download": "https://github.com/xerberde/xerbers-dsa5-roller/master.zip",
+  "manifest": "hhttps://github.com/xerberde/xerbers-dsa5-roller/blob/main/module.json",
+  "download": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/master.zip",
   "id": "xerbers-dsa5-roller",
   "compatibility": {
     "minimum": "10",
