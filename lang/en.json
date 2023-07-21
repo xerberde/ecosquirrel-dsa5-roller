@@ -2,8 +2,22 @@
 	"I18N.MAINTAINERS": [
 		"xerber"
 	],
-	"simpleDiceRoller.maxDiceCount.name": "Maximum Dices in a Roll",
-	"simpleDiceRoller.maxDiceCount.hint": "The highest number of dices you can throw through the Simple Dice Roller.",
-	"simpleDiceRoller.enableFateDice.name": "Enable Fate Dice",
-	"simpleDiceRoller.enableFateDice.hint": "If you dont know what Fate dice is you should not enable this."
+	"xdsa5r.maxDiceCount.name": "Maximum dice bonus displayed in the popup.",
+	"xdsa5r.maxDiceCount.hint": "The highest number of bonuses displayed in the popup. Values [1-10].",
+	"xdsa5r.enableLowLeP.name": "Activate for reduced LeP regeneration",
+	"xdsa5r.enableLowLeP.hint": "If you want to play with 1D3 for regeneration, then activate/deactivate here",
+	"xdsa5r.enableLeP.name": "Hide the LeP dice",
+	"xdsa5r.enableLeP.hint": "Hide the line for LeP dice",
+	"xdsa5r.enableAsP.name": "Hide the AsP cube",
+	"xdsa5r.enableAsP.hint": "Hides the line for AsP roll.",
+	"xdsa5r.enable1W20.name": "Hide the 1W20 die",
+	"xdsa5r.enable1W20.hint": "Hides the line for the 1W20 dice.",
+	"xdsa5r.enable1W6.name": "Hide the 1W6 die",
+	"xdsa5r.enable1W6.hint": "Hides the line for the 1W6 dice.",
+	"xdsa5r.enable2W6.name": "Hide the 2W6 dice",
+	"xdsa5r.enable2W6.hint": "Hides the line for the 2W6 dice.",
+	"xdsa5r.enable3W6.name": "Hide the 3W6 dice",
+	"xdsa5r.enable3W6.hint": "Hides the line for the 2W6 dice.",
+	"xdsa5r.enableCoinflip.name": "Hides the yes/no coin flip",
+	"xdsa5r.enableCoinflip.hint": "Hides the coin flip line"
 }
