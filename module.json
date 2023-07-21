@@ -1,41 +1,53 @@
 {
-  "id": "xerbersdsa5roller",
-  "title": "xerbers-dsa5-roller",
-  "description": "The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.",
-  "authors": [
-    {
-      "name": "xerber",
-      "flags": {}
-    }
-  ],
-  "url": "https://github.com/xerberde/xerbers-dsa5-roller",
+  "title": "DSA5 Dice Roller by xerber",
+  "description": "The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Dark Eye.",
+  "id": "xerbers-dsa5-roller",
   "version": "1.0.0",
-  "compatibility": {
-    "minimum": "11",
-    "verified": "11"
-  },
-  "scripts": [
-    "xerbers-dsa5-roller.js"
-  ],
+  "url": "https://github.com/xerberde/xerbers-dsa5-roller",
+  "manifest": "https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json",
+  "download": "https://github.com/xerberde/xerbers-dsa5-roller/archive/refs/heads/main.zip",
   "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json",
-      "flags": {}
-    },
-	  {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json",
-      "flags": {}
+      "path": "lang/en.json"
     }
+  ],
+  "authors": [
+    {
+      "name": "xerber",
+	  "dicord": "xerberde",
+	  "url": "https://www.ecosquirrel.de"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dsa5",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.0.0"
+        }
+      }
+    ]
+  },
+  "scripts": [
+    "xerbers-dsa5-roller.js"
   ],
   "styles": [
     "css/xerbers-dsa5-roller.css",
     "css/dicefont.css"
   ],
-  "socket":true,
-  "manifest": "https://github.com/xerberde/xerbers-dsa5-roller/blob/main/module.json",
-  "download": "https://github.com/xerberde/xerbers-dsa5-roller/archive/refs/heads/main.zip"
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
+  },
+  "name": "dsa5-introduction",
+  "minimumCoreVersion": "11",
 }
