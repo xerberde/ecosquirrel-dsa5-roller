@@ -1,6 +1,6 @@
 {
   "title": "DSA5 Dice Roller by xerber",
-  "description": "The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Dark Eye.",
+  "description": "The module adds FoundryVTT functions to simple dice roll, adapted for the game Das schwarze Auge / The Dark Eye.",
   "id": "xerbers-dsa5-roller",
   "version": "1.0.0",
   "url": "https://github.com/xerberde/xerbers-dsa5-roller",
