@@ -1,6 +1,6 @@
 # Foundry VTT - DSA5 Dice Roller by xerber
 
-The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.
+The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Dark Eye.
 
 After installation a new button is added to the left bar. When activated a popup will be displayed.
 ![demo_popup](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
