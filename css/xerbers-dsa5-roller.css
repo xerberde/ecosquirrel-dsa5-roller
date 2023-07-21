@@ -1,15 +1,15 @@
-#controls .simple-dice-roller-popup.control-tool {
+#controls .xerber-dice-roller-popup.control-tool {
     font-size: 18px !important;
     width: auto !important;
     height: auto !important;
 }
 
-.simple-dice-roller-popup:hover {
+.xerber-dice-roller-popup:hover {
     border: 1px solid #333 !important;
     box-shadow: 0 0 10px #000 !important;
 }
 
-.simple-dice-roller-popup ul {
+.xerber-dice-roller-popup ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -17,20 +17,20 @@
     display: flex;
 }
 
-.simple-dice-roller-popup .sdr-lastrow {
+.xerber-dice-roller-popup .sdr-lastrow {
     border-bottom: none;
 }
 
-.simple-dice-roller-popup .sdr-lastcol {
+.xerber-dice-roller-popup .sdr-lastcol {
     border-right: none;
 }
 
-.simple-dice-roller-popup .sdr-col1 {
+.xerber-dice-roller-popup .sdr-col1 {
     width: 100px;
     text-align: center;
 }
 
-.simple-dice-roller-popup li {
+.xerber-dice-roller-popup li {
     display: inline-block;
     width: 32px;
     text-align: center;
@@ -40,14 +40,14 @@
     cursor: pointer;
 }
 
-.simple-dice-roller-popup li:hover {
+.xerber-dice-roller-popup li:hover {
     color: #FFF;
     border: 1px solid red;
     border-bottom: 1px solid #ff6400;
     box-shadow: 0 0 10px #ff6400;
 }
 
-.simple-dice-roller-popup li i {
+.xerber-dice-roller-popup li i {
     font-size: 24px;
     vertical-align: middle;
 }
