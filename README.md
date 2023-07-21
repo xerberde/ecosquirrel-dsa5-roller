@@ -1,4 +1,3 @@
-[![Github All Releases](https://img.shields.io/github/downloads/jopeek/fvtt-simple-dice-roller/total.svg)]() [![Donate](https://img.shields.io/badge/Donate-BuyMeACoffee-green.svg)](https://www.buymeacoffee.com/ChalkOne)
 # Foundry VTT - xerbers-DSA5-roller
 
 The module adds FoundryVTT functions to simple dice rolls, adapted for the game Das schwarze Auge / The Black Eye.
