@@ -23,6 +23,8 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 * Change LeP regeneration dice roll form 1D6 to 1D3
 * Change number of rows with displayed bonus from 1-10
 
+![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_settings.png)
+
 ### Installation Instructions
 
 To install a module, follow these instructions:
@@ -35,7 +37,8 @@ To install a module, follow these instructions:
 * 1.0.0
 	* First Release
 * 1.0.1
-	* First Release
+	* New Feature - Settings menu
+	* New Feature - German and english translation
 * 1.0.2
 	* Patch - Issues with Setting Menu name
 	* Patch - Popup Windows moved to avoid overlap with scenes on top
