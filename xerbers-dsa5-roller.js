@@ -31,7 +31,7 @@ class DSA5DiceRoller {
         if (diceRoll == 1) {
 			var symbol = "";
             s.push(' class="xdsa5r-col1">');
-            if (diceType == 'Ja/Nein') {
+            if (diceType == 'Coinflip') {
 				s.push('<i ', diceType, '" data-dice-roll="1"></i>');
 				s.push('M&uuml;nzwurf');
 				symbol = diceType;
@@ -44,6 +44,11 @@ class DSA5DiceRoller {
 			else if (diceType == 'AsP') {
                 s.push('<i ', diceType, '" data-dice-roll="1"></i>');
 				s.push('AsP');
+				symbol = diceType;
+			}
+			else if (diceType == 'KaP') {
+                s.push('<i ', diceType, '" data-dice-roll="1"></i>');
+				s.push('KaP');
 				symbol = diceType;
 			}
 			else if (diceType == '1W6') {
@@ -66,14 +71,14 @@ class DSA5DiceRoller {
 				symbol = diceType;				
 			}
         } else if (isLast) {
-            if (diceType != 'Ja/Nein') {             
+            if (diceType != 'Coinflip') {             
 		        var attach = diceRoll;
 			    attach = attach -1;
 				s.push(' class="xdsa5r-lastcol">' + '&plusmn;' + attach);	
             } 	
         } 
 		else {
-            if (diceType != 'Ja/Nein') {
+            if (diceType != 'Coinflip') {
 			    var attach = diceRoll;
 			    attach = attach -1;
 				s.push('>' + '&plusmn;' + attach);	
@@ -100,7 +105,7 @@ class DSA5DiceRoller {
         return s.join('');
     }
 
-    static _createDiceTableHtml(maxDiceCount, enableLowLeP, enableLeP, enableAsP, enable1W20, enable1W6, enable2W6, enable3W6, enableCoinflip) {
+    static _createDiceTableHtml(maxDiceCount, enableLowLeP, enableLeP, enableAsP, enableKaP, enable1W20, enable1W6, enable2W6, enable3W6, enableCoinflip) {
 
         let s = [];
 
@@ -109,6 +114,9 @@ class DSA5DiceRoller {
 		}
 		if (enableAsP == false) {
 			s.push(this._createDiceTableHtmlOneLine('AsP', maxDiceCount));
+		}
+		if (enableKaP == false) {
+			s.push(this._createDiceTableHtmlOneLine('KaP', maxDiceCount));
 		}
 		if (enable1W20 == false) {
 			s.push(this._createDiceTableHtmlOneLine('1W20', maxDiceCount));
@@ -123,7 +131,7 @@ class DSA5DiceRoller {
 			s.push(this._createDiceTableHtmlOneLine('3W6', maxDiceCount));
 		}
 		if (enableCoinflip == false) {
-			s.push(this._createDiceTableHtmlOneLine('Ja/Nein', 1));
+			s.push(this._createDiceTableHtmlOneLine('Coinflip', 1));
 		}		
 		
         return s.join('');
@@ -133,6 +141,7 @@ class DSA5DiceRoller {
     static _cachedenableLowLeP = false;
 	static _cachedenableLeP = false;
 	static _cachedenableAsP = false;
+	static _cachedenableKaP = false;
 	static _cachedenable1W20 = false;
 	static _cachedenable1W6 = false;
 	static _cachedenable2W6 = false;
@@ -148,6 +157,8 @@ class DSA5DiceRoller {
 		let enableLeP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableLeP"));
 		
 		let enableAsP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableAsP"));
+		
+		let enableKaP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableKaP"));
 		
 		let enable1W20 = Boolean(game.settings.get("xerbers-dsa5-roller", "enable1W20"));
 				
@@ -167,13 +178,14 @@ class DSA5DiceRoller {
         this._cachedenableLowLeP = enableLowLeP;
 		this._cachedenableLeP = enableLeP;
 		this._cachedenableAsP = enableAsP;
+		this._cachedenableKaP = enableKaP;
 		this._cachedenable1W20 = enable1W20;
 		this._cachedenable1W6 = enable1W6;
 		this._cachedenable2W6 = enable2W6;		
 		this._cachedenable3W6 = enable3W6;
 		this._cachedCoinflip = enableCoinflip;
 		
-        const tableContentsHtml = this._createDiceTableHtml(maxDiceCount, enableLowLeP, enableLeP, enableAsP, enable1W20, enable1W6, enable2W6, enable3W6, enableCoinflip);
+        const tableContentsHtml = this._createDiceTableHtml(maxDiceCount, enableLowLeP, enableLeP, enableAsP, enableKaP, enable1W20, enable1W6, enable2W6, enable3W6, enableCoinflip);
 		const tableContents = $(tableContentsHtml);
 
         html.find('.xdsa5r-popup ul').remove();
@@ -195,7 +207,7 @@ class DSA5DiceRoller {
 		//console.log("DSA5 Dice Roller - diceType", diceType);
 		//console.log("DSA5 Dice Roller - diceRole", diceRoll);
 		//console.log("DSA5 Dice Roller - enableLowLeP", enableLowLeP);
-		if (diceType == 'Ja/Nein') {
+		if (diceType == 'Coinflip') {
 			formula = "1d2";
 		}
 		if (diceType == 'LeP') {
@@ -206,6 +218,9 @@ class DSA5DiceRoller {
 			}
 		}		
 		if (diceType == 'AsP') {
+			formula = "1d6";
+		}
+		if (diceType == 'KaP') {
 			formula = "1d6";
 		}
 		if (diceType == '1W20') {
@@ -313,6 +328,14 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
+	game.settings.register("xerbers-dsa5-roller", "enableKaP", {
+        name: game.i18n.localize("xdsa5r.enableKaP.name"),
+		hint: game.i18n.localize("xdsa5r.enableKaP.hint"),
+        scope: "world",
+        config: true,
+        default: true,
+        type: Boolean
+    });
 	game.settings.register("xerbers-dsa5-roller", "enable1W20", {
         name: game.i18n.localize("xdsa5r.enable1W20.name"),
 		hint: game.i18n.localize("xdsa5r.enable1W20.hint"),
@@ -350,7 +373,7 @@ Hooks.once("init", () => {
 		hint: game.i18n.localize("xdsa5r.enableCoinflip.hint"),
         scope: "world",
         config: true,
-        default: false,
+        default: true,
         type: Boolean
     });
 });

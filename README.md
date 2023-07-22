@@ -7,7 +7,7 @@ After installation a new button is added to the left bar. When activated a popup
 ![demo_popup](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
 
 
-From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bonus points.
+From here you can roll a LeP, AsP, KaP, 1D6, 2D6, 3D6 as well 1D20 with or without bonus points.
 
 
 ![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_roll.png)
@@ -43,6 +43,9 @@ To install a module, follow these instructions:
 	* Patch - Issues with Setting Menu name
 	* Patch - Popup Windows moved to avoid overlap with scenes on top
 	* New Feature - Leftclick and Rightclick integration for negative/positive bonus on roll
+* 1.0.3
+	* Patch - Translation for german and english corrected
+	* New Feature - Karmaenergy added as dice line
 
 ### Feedback
 
