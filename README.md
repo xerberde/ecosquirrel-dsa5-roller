@@ -28,7 +28,7 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 To install a module, follow these instructions:
 
 1. Start Foundry VTT and browse to the Game Modules tab in the Configuration and Setup menu
-2. Select the Install Module button and enter the following URL: https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json
+2. Select the Install Module button and enter the following [module.json](https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json)
 3. Click Install and wait for installation to complete 
 
 ### Release Notes
@@ -47,6 +47,5 @@ If you have any suggestions or feedback, please contact me on Discord (xerberde)
 
 
 ### Credits
-Thanks to jopeek for providing the code.
-The development based on the Foundry VTT Modul fvtt-simple-dice-roller by jopeek. 
-URL: https://github.com/jopeek/fvtt-simple-dice-roller/
+Thanks to [jopeek](https://github.com/jopeek/fvtt-simple-dice-roller/) for providing ideas and base code.
+
