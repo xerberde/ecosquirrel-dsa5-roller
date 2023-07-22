@@ -7,7 +7,7 @@ After installation a new button is added to the left bar. When activated a popup
 ![demo_popup](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
 
 
-From here you can roll a LeP, AsP, KaP, 1D6, 2D6, 3D6 as well 1D20 with or without bonus points.
+From here you can roll a Coin flip, LeP, AsP, KaP, 1D6, 2D6, 3D6 as well 1D20 with or without bonus points.
 
 
 ![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_roll.png)
