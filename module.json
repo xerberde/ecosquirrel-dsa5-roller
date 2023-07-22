@@ -5,8 +5,8 @@
   "name": "xerbers-dsa5-roller",
   "version": "1.0.2",
   "url": "https://github.com/xerberde/xerbers-dsa5-roller",
-  "manifest": "https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main-1.0-2/module.json",
-  "download": "https://github.com/xerberde/xerbers-dsa5-roller/archive/refs/heads/main-1.0-2.zip",
+  "manifest": "https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json",
+  "download": "https://github.com/xerberde/xerbers-dsa5-roller/archive/refs/heads/main.zip",
   "languages": [
     {
       "lang": "de",
