@@ -23,7 +23,7 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 * Change LeP regeneration dice roll form 1D6 to 1D3
 * Change number of rows with displayed bonus from 1-10
 
-![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_settings.png)
+![demo_settings](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_settings.png)
 
 ### Installation Instructions
 
