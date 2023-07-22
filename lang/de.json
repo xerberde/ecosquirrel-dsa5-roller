@@ -1,7 +1,6 @@
 {
-	"I18N.MAINTAINERS": [
-		"xerber"
-	],
+	"I18N.MAINTAINERS": ["xerber"],
+	"I18N.LANGUAGE": "Deutsch",
 	"xdsa5r.maxDiceCount.name": "Maximaler Würfelbonus die im Popup dargestellt werden.",
 	"xdsa5r.maxDiceCount.hint": "Die höchste Anzahl von Boni die im Popup angezeigt werden. Wertebereich [1-10].",
 	"xdsa5r.enableLowLeP.name": "Aktivieren für reduzierte LeP regeneration.",

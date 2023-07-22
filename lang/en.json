@@ -1,7 +1,6 @@
 {
-	"I18N.MAINTAINERS": [
-		"xerber"
-	],
+	"I18N.MAINTAINERS": ["xerber"],
+	"I18N.LANGUAGE": "Deutsch",
 	"xdsa5r.maxDiceCount.name": "Maximum dice bonus displayed in the popup.",
 	"xdsa5r.maxDiceCount.hint": "The highest number of bonuses displayed in the popup. Values [1-10].",
 	"xdsa5r.enableLowLeP.name": "Activate for reduced LeP regeneration",

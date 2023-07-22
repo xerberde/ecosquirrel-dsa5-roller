@@ -1,16 +1,16 @@
-class SimpleDiceRoller {
+class DSA5DiceRoller {
 
     static async Init(controls, html) {
      const diceRollbtn = $(
             `
-            <li class="scene-control sdr-scene-control" data-control="simple-dice-roller" title="DSA5 Dice Roller by xerber">
+            <li class="scene-control xdsa5r-scene-control" data-control="xerbers-dsa5-roller" title="DSA5 Dice Roller">
                 <i class="fas fa-dice-d20"></i>
             </li>
             `
         );
         const diceRollControls = `
-            <ol class="sub-controls app control-tools sdr-sub-controls">
-                <li id="SDRpopup" class="simple-dice-roller-popup control-tool">
+            <ol class="sub-controls app control-tools xdsa5r-sub-controls">
+                <li id="XDSA5Rpopup" class="xdsa5r-popup control-tool">
                 </li>
             </ol>
         `;
@@ -28,10 +28,9 @@ class SimpleDiceRoller {
         let s = [];
         s.push('<li data-dice-type="', diceType, '" data-dice-roll="', diceRoll, '"');
 
-	
         if (diceRoll == 1) {
 			var symbol = "";
-            s.push(' class="sdr-col1">');
+            s.push(' class="xdsa5r-col1">');
             if (diceType == 'Ja/Nein') {
 				s.push('<i ', diceType, '" data-dice-roll="1"></i>');
 				s.push('M&uuml;nzwurf');
@@ -70,18 +69,14 @@ class SimpleDiceRoller {
             if (diceType != 'Ja/Nein') {             
 		        var attach = diceRoll;
 			    attach = attach -1;
-				s.push(' class="sdr-lastcol">' + '+' + attach);
-                //console.log("xerber formula =  ", "1");		
+				s.push(' class="xdsa5r-lastcol">' + '&plusmn;' + attach);	
             } 	
         } 
 		else {
             if (diceType != 'Ja/Nein') {
 			    var attach = diceRoll;
 			    attach = attach -1;
-				//s.push('<i class="df-dot-d6-1" data-dice-type="', diceType, '" data-dice-roll="1"></i>');
-				//s.push('<i class="df-dot-d6-2" data-dice-type="', diceType, '" data-dice-roll="1"></i>');
-			    s.push('>' + '+' + attach);
-                //console.log("xerber formula =  ", "2");	
+				s.push('>' + '&plusmn;' + attach);	
             } 		
         }
         s.push('</li>');
@@ -109,7 +104,6 @@ class SimpleDiceRoller {
 
         let s = [];
 
-       
         if (enableLeP == false) {
 			s.push(this._createDiceTableHtmlOneLine('LeP', maxDiceCount));
 		}
@@ -131,9 +125,7 @@ class SimpleDiceRoller {
 		if (enableCoinflip == false) {
 			s.push(this._createDiceTableHtmlOneLine('Ja/Nein', 1));
 		}		
-		 
-		 
-		 
+		
         return s.join('');
     }
 
@@ -149,66 +141,60 @@ class SimpleDiceRoller {
 
     static async _createDiceTable(html) {
 
-        let maxDiceCount = parseInt(game.settings.get("simple-dice-roller", "maxDiceCount"), 10);
+        let maxDiceCount = parseInt(game.settings.get("xerbers-dsa5-roller", "maxDiceCount"), 10);
 
-        let enableLowLeP = Boolean(game.settings.get("simple-dice-roller", "enableLowLeP"));
+        let enableLowLeP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableLowLeP"));
 
-		let enableLeP = Boolean(game.settings.get("simple-dice-roller", "enableLeP"));
+		let enableLeP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableLeP"));
 		
-		let enableAsP = Boolean(game.settings.get("simple-dice-roller", "enableAsP"));
+		let enableAsP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableAsP"));
 		
-		let enable1W20 = Boolean(game.settings.get("simple-dice-roller", "enable1W20"));
+		let enable1W20 = Boolean(game.settings.get("xerbers-dsa5-roller", "enable1W20"));
 				
-		let enable1W6 = Boolean(game.settings.get("simple-dice-roller", "enable1W6"));
+		let enable1W6 = Boolean(game.settings.get("xerbers-dsa5-roller", "enable1W6"));
 						
-		let enable2W6 = Boolean(game.settings.get("simple-dice-roller", "enable2W6"));
+		let enable2W6 = Boolean(game.settings.get("xerbers-dsa5-roller", "enable2W6"));
 								
-		let enable3W6 = Boolean(game.settings.get("simple-dice-roller", "enable3W6"));
+		let enable3W6 = Boolean(game.settings.get("xerbers-dsa5-roller", "enable3W6"));
 
-		let enableCoinflip = Boolean(game.settings.get("simple-dice-roller", "enableCoinflip"));
+		let enableCoinflip = Boolean(game.settings.get("xerbers-dsa5-roller", "enableCoinflip"));
 
         if (isNaN(maxDiceCount) || (maxDiceCount < 1) || (maxDiceCount > 30)) {
             maxDiceCount = 5;
         }
 
         this._cachedMaxDiceCount = maxDiceCount;
-
         this._cachedenableLowLeP = enableLowLeP;
-		
 		this._cachedenableLeP = enableLeP;
-		
 		this._cachedenableAsP = enableAsP;
-		
 		this._cachedenable1W20 = enable1W20;
-				
 		this._cachedenable1W6 = enable1W6;
-						
-		this._cachedenable2W6 = enable2W6;
-								
+		this._cachedenable2W6 = enable2W6;		
 		this._cachedenable3W6 = enable3W6;
-		
 		this._cachedCoinflip = enableCoinflip;
 		
         const tableContentsHtml = this._createDiceTableHtml(maxDiceCount, enableLowLeP, enableLeP, enableAsP, enable1W20, enable1W6, enable2W6, enable3W6, enableCoinflip);
+		const tableContents = $(tableContentsHtml);
 
-        const tableContents = $(tableContentsHtml);
+        html.find('.xdsa5r-popup ul').remove();
 
-        html.find('.simple-dice-roller-popup ul').remove();
+        html.find('.xdsa5r-popup').append(tableContents);
 
-        html.find('.simple-dice-roller-popup').append(tableContents);
-
-        html.find('.simple-dice-roller-popup li').click(ev => this._rollDice(ev, html, enableLowLeP));
+        html.find('.xdsa5r-popup li').click(ev => this._rollDice(ev, html, enableLowLeP, true));
+		
+		html.find('.xdsa5r-popup li').contextmenu(ev => this._rollDice(ev, html, enableLowLeP, false));
+		
     }
 
-    static async _rollDice(event, html, enableLowLeP) {
+    static async _rollDice(event, html, enableLowLeP, mouseclick) {
 	
         var diceType = event.target.dataset.diceType;
         var diceRoll = event.target.dataset.diceRoll;
 		var formula = "";
-		
-		//console.log("xerber diceType = ", diceType);
-		//console.log("xerber diceRole = ", diceRoll);
-		//console.log("xerber enableLowLeP = ", enableLowLeP);
+		//console.log("DSA5 Dice Roller - mouseclick", mouse);
+		//console.log("DSA5 Dice Roller - diceType", diceType);
+		//console.log("DSA5 Dice Roller - diceRole", diceRoll);
+		//console.log("DSA5 Dice Roller - enableLowLeP", enableLowLeP);
 		if (diceType == 'Ja/Nein') {
 			formula = "1d2";
 		}
@@ -238,8 +224,11 @@ class SimpleDiceRoller {
 			var addon = diceRoll -1; 
             formula = formula + '+' + addon;
 		}
-	    //console.log("xerber formula =  ", formula);		
-        
+	    	
+        if (mouseclick == false) {
+			formula = formula.replace("+", "-");
+		}
+		//console.log("DSA5 Dice Roller - formula", formula);		
 		let r = new Roll(formula);
 
         r.toMessage({
@@ -251,9 +240,9 @@ class SimpleDiceRoller {
     }
 
     static async PopupSheet(event, html) {
-        console.log("SDR | clicked");
+        //console.log("DSA5 Dice Roller - PopupSheet clicked");
         //canvas.stage.children.filter(layer => layer._active).forEach(layer => layer.deactivate());
-        if (html.find('.sdr-scene-control').hasClass('active')) {
+        if (html.find('.xdsa5r-scene-control').hasClass('active')) {
             this._close(event, html);
         } else {
             this._open(event, html);
@@ -261,23 +250,23 @@ class SimpleDiceRoller {
     }
 
     static async _close(event, html) {
-        console.log("SDR | closed");
-        //html.find('#SDRpopup').hide();
-        html.find('.sdr-scene-control').removeClass('active');
-        html.find('.sdr-sub-controls').removeClass('active');
+        //console.log("DSA5 Dice Roller - PopupSheet closed");
+        //html.find('#XDSA5Rpopup').hide();
+        html.find('.xdsa5r-scene-control').removeClass('active');
+        html.find('.xdsa5r-sub-controls').removeClass('active');
         html.find('.scene-control').first().addClass('active');
 
         event.stopPropagation();
     }
 
     static async _open(event, html) {
-        console.log("SDR | opened");
+        //console.log("DSA5 Dice Roller - Event opened");
         this._createDiceTable(html);
         html.find('.scene-control').removeClass('active');
         html.find('.sub-controls').removeClass('active');
-        //html.find('#SDRpopup').show();
-        html.find('.sdr-scene-control').addClass('active');
-        html.find('.sdr-sub-controls').addClass('active');
+        //html.find('#XDSA5Rpopup').show();
+        html.find('.xdsa5rscene-control').addClass('active');
+        html.find('.xdsa5r-sub-controls').addClass('active');
         event.stopPropagation();
     }
 
@@ -285,12 +274,14 @@ class SimpleDiceRoller {
 }
 
 Hooks.on('renderSceneControls', (controls, html) => {
-    //console.log("SDR here", html);
-    SimpleDiceRoller.Init(controls, html);
+    //console.log("DSA5 Dice Roller - rendernSceneControls HTML", html);
+	//console.log("DSA5 Dice Roller - rendernSceneControls Controls", controls);
+    DSA5DiceRoller.Init(controls, html);
 });
-
+	
 Hooks.once("init", () => {
-    game.settings.register("simple-dice-roller", "maxDiceCount", {
+    
+	game.settings.register("xerbers-dsa5-roller", "maxDiceCount", {
         name: game.i18n.localize("xdsa5r.maxDiceCount.name"),
         hint: game.i18n.localize("xdsa5r.maxDiceCount.hint"),
         scope: "world",
@@ -298,7 +289,7 @@ Hooks.once("init", () => {
         default: 10,
         type: Number
     });
-    game.settings.register("simple-dice-roller", "enableLowLeP", {
+    game.settings.register("xerbers-dsa5-roller", "enableLowLeP", {
         name: game.i18n.localize("xdsa5r.enableLowLeP.name"),
 		hint: game.i18n.localize("xdsa5r.enableLowLeP.hint"),
         scope: "world",
@@ -306,7 +297,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enableLeP", {
+	game.settings.register("xerbers-dsa5-roller", "enableLeP", {
         name: game.i18n.localize("xdsa5r.enableLeP.name"),
 		hint: game.i18n.localize("xdsa5r.enableLeP.hint"),
         scope: "world",
@@ -314,7 +305,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enableAsP", {
+	game.settings.register("xerbers-dsa5-roller", "enableAsP", {
         name: game.i18n.localize("xdsa5r.enableAsP.name"),
 		hint: game.i18n.localize("xdsa5r.enableAsP.hint"),
         scope: "world",
@@ -322,7 +313,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enable1W20", {
+	game.settings.register("xerbers-dsa5-roller", "enable1W20", {
         name: game.i18n.localize("xdsa5r.enable1W20.name"),
 		hint: game.i18n.localize("xdsa5r.enable1W20.hint"),
         scope: "world",
@@ -330,7 +321,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enable1W6", {
+	game.settings.register("xerbers-dsa5-roller", "enable1W6", {
         name: game.i18n.localize("xdsa5r.enable1W6.name"),
 		hint: game.i18n.localize("xdsa5r.enable1W6.hint"),
         scope: "world",
@@ -338,7 +329,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enable2W6", {
+	game.settings.register("xerbers-dsa5-roller", "enable2W6", {
         name: game.i18n.localize("xdsa5r.enable2W6.name"),
 		hint: game.i18n.localize("xdsa5r.enable2W6.hint"),
         scope: "world",
@@ -346,7 +337,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enable3W6", {
+	game.settings.register("xerbers-dsa5-roller", "enable3W6", {
         name: game.i18n.localize("xdsa5r.enable3W6.name"),
 		hint: game.i18n.localize("xdsa5r.enable3W6.hint"),
         scope: "world",
@@ -354,7 +345,7 @@ Hooks.once("init", () => {
         default: false,
         type: Boolean
     });
-	game.settings.register("simple-dice-roller", "enableCoinflip", {
+	game.settings.register("xerbers-dsa5-roller", "enableCoinflip", {
         name: game.i18n.localize("xdsa5r.enableCoinflip.name"),
 		hint: game.i18n.localize("xdsa5r.enableCoinflip.hint"),
         scope: "world",
@@ -364,4 +355,4 @@ Hooks.once("init", () => {
     });
 });
 
-//console.log("SDR | Simple Dice Roller loaded");
+//console.log("DSA5 Dice Roller - loaded");
