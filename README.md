@@ -49,7 +49,7 @@ To install a module, follow these instructions:
 
 ### Feedback
 
-If you have any suggestions or feedback, please contact me on Discord (xerberde).
+If you have any suggestions or feedback, please contact me on Discord [xerberde](https://discordapp.com/users/xerberde).
 
 
 ### Credits
