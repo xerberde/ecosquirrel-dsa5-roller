@@ -23,7 +23,7 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 To install a module, follow these instructions:
 
 1. Start Foundry VTT and browse to the Game Modules tab in the Configuration and Setup menu
-2. Select the Install Module button and enter the following https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json
+2. Select the Install Module button and enter the following [module.json](https://raw.githubusercontent.com/xerberde/xerbers-dsa5-roller/main/module.json)
 3. Click Install and wait for installation to complete 
 
 ### Release Notes
