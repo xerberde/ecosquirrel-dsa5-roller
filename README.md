@@ -1,4 +1,4 @@
-# Foundry VTT - DSA5 Dice Roller by xerber
+# DSA5 Dice Roller for Foundry VTT 11
 
 The module adds FoundryVTT functions to simple dice roll, adapted for the game Das schwarze Auge / The Dark Eye.
 
@@ -34,6 +34,7 @@ To install a module, follow these instructions:
 3. Click Install and wait for installation to complete 
 
 ### Release Notes
+
 * 1.0.0
 	* First Release
 * 1.0.1
@@ -46,6 +47,8 @@ To install a module, follow these instructions:
 * 1.0.3
 	* Patch - Translation for german and english corrected
 	* New Feature - Karmaenergy added as dice line
+* 1.0.4
+	* Patch - Popup Window open/close fix
 
 ### Feedback
 

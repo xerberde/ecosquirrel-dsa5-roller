@@ -1,7 +1,8 @@
 class DSA5DiceRoller {
-
+	
+	
     static async Init(controls, html) {
-     const diceRollbtn = $(
+	 const diceRollbtn = $(
             `
             <li class="scene-control xdsa5r-scene-control" data-control="xerbers-dsa5-roller" title="DSA5 Dice Roller">
                 <i class="fas fa-dice-d20"></i>
@@ -17,7 +18,7 @@ class DSA5DiceRoller {
 
         html.find(".main-controls").append(diceRollbtn);
         html.append(diceRollControls);
-
+		var popupactive = true;
         diceRollbtn[0].addEventListener('click', ev => this.PopupSheet(ev, html));
 
         this._createDiceTable(html);
@@ -150,7 +151,7 @@ class DSA5DiceRoller {
 
     static async _createDiceTable(html) {
 
-        let maxDiceCount = parseInt(game.settings.get("xerbers-dsa5-roller", "maxDiceCount"), 10);
+        let maxDiceCount = parseInt(game.settings.get("xerbers-dsa5-roller", "maxDiceCount"), 9);
 
         let enableLowLeP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableLowLeP"));
 
@@ -170,10 +171,10 @@ class DSA5DiceRoller {
 
 		let enableCoinflip = Boolean(game.settings.get("xerbers-dsa5-roller", "enableCoinflip"));
 
-        if (isNaN(maxDiceCount) || (maxDiceCount < 1) || (maxDiceCount > 30)) {
-            maxDiceCount = 5;
-        }
-
+        if (isNaN(maxDiceCount)) { maxDiceCount = 9; }
+		if (maxDiceCount < 1) { maxDiceCount = 1; }
+		if (maxDiceCount > 9) { maxDiceCount = 9; }
+		
         this._cachedMaxDiceCount = maxDiceCount;
         this._cachedenableLowLeP = enableLowLeP;
 		this._cachedenableLeP = enableLeP;
@@ -238,8 +239,7 @@ class DSA5DiceRoller {
 		if (diceRoll != 1) {
 			var addon = diceRoll -1; 
             formula = formula + '+' + addon;
-		}
-	    	
+		}	
         if (mouseclick == false) {
 			formula = formula.replace("+", "-");
 		}
@@ -255,26 +255,28 @@ class DSA5DiceRoller {
     }
 
     static async PopupSheet(event, html) {
-        //console.log("DSA5 Dice Roller - PopupSheet clicked");
-        //canvas.stage.children.filter(layer => layer._active).forEach(layer => layer.deactivate());
-        if (html.find('.xdsa5r-scene-control').hasClass('active')) {
+		//console.log("DSA5 Dice Roller - HTML", html);
+		//console.log("DSA5 Dice Roller - PopupSheet clicked");
+		//canvas.stage.children.filter(layer => layer._active).forEach(layer => layer.deactivate());
+        if (html.find('.xdsa5r-sub-controls').hasClass('active')) {
             this._close(event, html);
         } else {
             this._open(event, html);
         }
+		
     }
 
     static async _close(event, html) {
-        //console.log("DSA5 Dice Roller - PopupSheet closed");
-        //html.find('#XDSA5Rpopup').hide();
+		console.log("DSA5 Dice Roller - PopupSheet closed");
+		//html.find('#XDSA5Rpopup').hide();
         html.find('.xdsa5r-scene-control').removeClass('active');
         html.find('.xdsa5r-sub-controls').removeClass('active');
         html.find('.scene-control').first().addClass('active');
-
         event.stopPropagation();
     }
 
     static async _open(event, html) {
+		//console.log("DSA5 Dice Roller - popupactive", popupactive);
         //console.log("DSA5 Dice Roller - Event opened");
         this._createDiceTable(html);
         html.find('.scene-control').removeClass('active');
@@ -301,7 +303,7 @@ Hooks.once("init", () => {
         hint: game.i18n.localize("xdsa5r.maxDiceCount.hint"),
         scope: "world",
         config: true,
-        default: 10,
+        default: 9,
         type: Number
     });
     game.settings.register("xerbers-dsa5-roller", "enableLowLeP", {

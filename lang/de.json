@@ -6,10 +6,13 @@
 	"xdsa5r.enableLowLeP.name": "Aktivieren für reduzierte LeP regeneration.",
     "xdsa5r.enableLowLeP.hint": "Wenn du mit 1W3 zur Regeneration spielst, dann hier aktivieren.",
 	"xdsa5r.enableLeP.name": "LeP Würfelzeile ausblenden",
+	"xdsa5r.enableLeP.short": "LeP",
 	"xdsa5r.enableLeP.hint": "Blendet die Zeile für LeP im Würfelfenster aus.",
 	"xdsa5r.enableAsP.name": "AsP Würfelzeile ausblenden",
+	"xdsa5r.enableAsP.short": "AsP",
 	"xdsa5r.enableAsP.hint": "Blendet die Zeile für AsP im Würfelfenster aus.",
 	"xdsa5r.enableKaP.name": "KaP Würfelzeile ausblenden",
+	"xdsa5r.enableKaP.short": "KaP",
 	"xdsa5r.enableKaP.hint": "Blendet die Zeile für KaP im Würfelfenster aus.",
 	"xdsa5r.enable1W20.name": "1W20 Würfel ausblenden",
 	"xdsa5r.enable1W20.hint": "Blendet die Zeile für den 1W20 im Würfelfenster aus.",
@@ -21,5 +24,6 @@
 	"xdsa5r.enable3W6.hint": "Blendet die Zeile für die 3W6 im Würfelfenster aus.",
 	"xdsa5r.enableCoinflip.name": "Münzwurf ausblenden",
 	"xdsa5r.enableCoinflip.hint": "Blendet die Zeile Münzwurf aus."
+	
 	
 }
