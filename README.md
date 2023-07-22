@@ -14,8 +14,8 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 
 ### How to use
 
-* Mouse left click on &plusmn; in the popup performs a throw with positive bonus.
-* Mouse right click on &plusmn; in the popup performs a roll with negative bonus.
+* Mouse left-click on &plusmn; in the popup window to performs a dice roll with positive bonus.
+* Mouse right-click on &plusmn; in the popup window to performs a dice roll with negative bonus.
 
 
 ### Installation Instructions
@@ -33,7 +33,7 @@ To install a module, follow these instructions:
 	* First Release
 * 1.0.1
 	* Patch - Issues with Setting Menu name
-	* New Feature - Leftclick and Rightclick integration for negative/positive bonus on roll
+	* New Feature - Left-click and Right-click integration for negative/positive bonus on roll
 
 ### Feedback
 
