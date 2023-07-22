@@ -17,6 +17,11 @@ From here you can roll a LeP, AsP, 1D6, 2D6, 3D6 as well 1D20 with or without bo
 * Mouse left click on &plusmn; in the popup performs a throw with positive bonus.
 * Mouse right click on &plusmn; in the popup performs a roll with negative bonus.
 
+### Settings
+
+* Enable/Disable each dice row in settings dialog to show or not show in popup
+* Change LeP regeneration dice roll form 1D6 to 1D3
+* Change number of rows with displayed bonus from 1-10
 
 ### Installation Instructions
 
