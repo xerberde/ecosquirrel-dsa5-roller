@@ -30,7 +30,7 @@ To install a module, follow these instructions:
 	* First Release
 * 1.0.1
 	* First Release
-* 1.0.1
+* 1.0.2
 	* Patch - Issues with Setting Menu name
 	* New Feature - Left-click and Right-click integration for negative/positive bonus on roll
 
