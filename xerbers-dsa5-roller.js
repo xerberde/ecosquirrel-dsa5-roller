@@ -319,7 +319,7 @@ Hooks.once("init", () => {
 		hint: game.i18n.localize("xdsa5r.enableLeP.hint"),
         scope: "world",
         config: true,
-        default: false,
+        default: true,
         type: Boolean
     });
 	game.settings.register("xerbers-dsa5-roller", "enableAsP", {
@@ -327,7 +327,7 @@ Hooks.once("init", () => {
 		hint: game.i18n.localize("xdsa5r.enableAsP.hint"),
         scope: "world",
         config: true,
-        default: false,
+        default: true,
         type: Boolean
     });
 	game.settings.register("xerbers-dsa5-roller", "enableKaP", {
