@@ -17,12 +17,14 @@ After installation a new button is added to the left bar. When activated a popup
 
 ![demo_popup](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_popup.png)
 
+* Mouse left click on &plusmn; in the popup performs a throw with positive bonus.
+* Mouse right click on &plusmn; in the popup performs a roll with negative bonus.
+
 From here you can roll a 1D6, 2D6, 3D6 or 1D20 with or without bonus points as well, when activated a Coin flip, LeP, AsP, KaP roll.
 
 ![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_roll.png)
 
-* Mouse left click on &plusmn; in the popup performs a throw with positive bonus.
-* Mouse right click on &plusmn; in the popup performs a roll with negative bonus.
+
 
 
 ### Settings
