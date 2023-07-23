@@ -2,7 +2,8 @@
 
 The module adds FoundryVTT functions to simple dice roll, adapted for the game Das schwarze Auge / The Dark Eye.
 
-Just another Dice Roller.<br>
+Just another Dice Roller.
+
 Was intended as a small project to see if I can do it, as so often with small things it becomes bigger than you think
 and lasts longer than you wanted and learns more than you thought. That's exactly why I love small projects like this.
 <br>
@@ -20,10 +21,9 @@ From here you can roll a 1D6, 2D6, 3D6 or 1D20 with or without bonus points as w
 
 ![demo_roll](https://github.com/xerberde/xerbers-dsa5-roller/blob/main/images/demo_roll.png)
 
-<br>
 * Mouse left click on &plusmn; in the popup performs a throw with positive bonus.
 * Mouse right click on &plusmn; in the popup performs a roll with negative bonus.
-<br>
+
 
 ### Settings
 
