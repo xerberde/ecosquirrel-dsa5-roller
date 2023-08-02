@@ -55,7 +55,9 @@ To install a module, follow these instructions:
 	* New Feature - Karmaenergy added as dice line
 * 1.0.4
 	* Patch - Popup Window open/close fix
-
+* 1.0.5
+	* Patch - Issues with amount of displayed bonus
+	* Patch - Information about right and leftclick added to settings dialog
 ### Feedback
 
 If you have any suggestions or feedback, please contact me on Discord [xerberde](https://discordapp.com/users/xerberde).

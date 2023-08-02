@@ -151,7 +151,7 @@ class DSA5DiceRoller {
 
     static async _createDiceTable(html) {
 
-        let maxDiceCount = parseInt(game.settings.get("xerbers-dsa5-roller", "maxDiceCount"), 9);
+        let maxDiceCount = parseInt(game.settings.get("xerbers-dsa5-roller", "maxDiceCount"), 10);
 
         let enableLowLeP = Boolean(game.settings.get("xerbers-dsa5-roller", "enableLowLeP"));
 
@@ -171,9 +171,9 @@ class DSA5DiceRoller {
 
 		let enableCoinflip = Boolean(game.settings.get("xerbers-dsa5-roller", "enableCoinflip"));
 
-        if (isNaN(maxDiceCount)) { maxDiceCount = 9; }
+        if (isNaN(maxDiceCount)) { maxDiceCount = 10; }
 		if (maxDiceCount < 1) { maxDiceCount = 1; }
-		if (maxDiceCount > 9) { maxDiceCount = 9; }
+		if (maxDiceCount > 10) { maxDiceCount = 10; }
 		
         this._cachedMaxDiceCount = maxDiceCount;
         this._cachedenableLowLeP = enableLowLeP;

@@ -2,7 +2,7 @@
 	"I18N.MAINTAINERS": [ "deepl" ],
 	"I18N.LANGUAGE": [ "english" ],
 	"xdsa5r.maxDiceCount.name": "Number of dice bonuses displayed in the dice window.",
-	"xdsa5r.maxDiceCount.hint": "The highest number of bonuses displayed in the popup. Value range [1-10].",
+	"xdsa5r.maxDiceCount.hint": "The highest number of bonuses displayed in the popup. Value range [1-10]. Mouse left click on ± in the popup performs a throw with positive bonus.Mouse right click on ± in the popup performs a roll with negative bonus.",
 	"xdsa5r.enableLowLeP.name": "Enable for reduced LeP regeneration.",
     "xdsa5r.enableLowLeP.hint": "If you play with 1W3 for regeneration, then enable here.",
 	"xdsa5r.enableLeP.name": "Hide LeP dice line",
