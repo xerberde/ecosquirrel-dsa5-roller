@@ -58,6 +58,8 @@ To install a module, follow these instructions:
 * 1.0.5
 	* Patch - Issues with amount of displayed bonus
 	* Patch - Information about right and leftclick added to settings dialog
+* 1.0.6
+	* Patch - Issues with Foundry VTT Version 10 fixed
 ### Feedback
 
 If you have any suggestions or feedback, please contact me on Discord [xerberde](https://discordapp.com/users/xerberde).
