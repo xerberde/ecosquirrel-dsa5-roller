@@ -25,7 +25,7 @@ From here you can roll a 1D6, 2D6, 3D6 or 1D20 with or without bonus points as w
 
 ### Settings
 
-* Enable/Disable each dice row in settings dialog to show or not show in popup
+* Enable/Disable each dice roll in settings dialog to show or not show in popup
 * Change LeP regeneration dice roll form 1D6 to 1D3
 * Change number of rows with displayed bonus from 1-10
 
