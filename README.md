@@ -1,6 +1,6 @@
 # DSA5 Dice Roller for Foundry VTT
 
-Just another Dice Roller. The module adds FoundryVTT functions to dice roll. Adapted for the game Das schwarze Auge / The Dark Eye to have onyl the common used dices as well having a simple interface.
+Just another Dice Roller. The module adds FoundryVTT functions to dice roll. Adapted for the game Das schwarze Auge / The Dark Eye to have only the common used dices as well having a simple interface.
 
 Was intended as a small project to see if I can do it, as so often with small things it becomes bigger than you think
 and lasts longer than you wanted and learns more than you thought. That's exactly why I love small projects like this.
