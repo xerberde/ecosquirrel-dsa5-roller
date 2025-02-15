@@ -4,7 +4,7 @@ class DSA5DiceRoller {
     static async Init(controls, html) {
 	 const diceRollbtn = $(
             `
-            <li class="scene-control xdsa5r-scene-control" data-control="xerbers-dsa5-roller" title="DSA5 Dice Roller">
+            <li class="scene-control xdsa5r-scene-control" data-control="xerbers-dsa5-roller" title="Ecosquirrel DSA5 Dice Roller">
                 <i class="fas fa-dice-d20"></i>
             </li>
             `
