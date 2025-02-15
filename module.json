@@ -1,6 +1,6 @@
 {
-  "title": "DSA5 Dice Roller",
-  "description": "The module adds FoundryVTT functions to simple dice roll, adapted for the game Das schwarze Auge / The Dark Eye.",
+  "title": "Ecosquirrel DSA5 Dice Roller",
+  "description": "The module adds FoundryVTT functions to simple dice roll, adapted for the game The Dark Eye / Das schwarze Auge.",
   "id": "xerbers-dsa5-roller",
   "name": "xerbers-dsa5-roller",
   "version": "1.0.7",
