@@ -1,4 +1,4 @@
-# DSA5 Dice Roller for Foundry VTT
+# Ecosquirrel DSA5 Dice Roller for Foundry VTT
 
 Just another Dice Roller. The module adds FoundryVTT functions to dice roll. Adapted for the game Das schwarze Auge / The Dark Eye to have only the common used dices as well having a simple interface.
 
