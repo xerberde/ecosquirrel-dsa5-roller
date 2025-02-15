@@ -45,9 +45,9 @@
     "css/dicefont.css"
   ],
   "compatibility": {
-    "minimum": "10",
-    "verified": "11",
-    "maximum": "11"
+    "minimum": "11",
+    "verified": "12",
+    "maximum": "13"
   },
    "minimumCoreVersion": "10",
    "socket": true
