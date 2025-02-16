@@ -62,6 +62,7 @@ To install a module, follow these instructions:
 	* Patch - Issues with Foundry VTT Version 10 fixed
 * 1.0.7
 	* Patch - Issues with Foundry VTT Version 11/12 fixed
+        * Patch - Renamed to Ecosquirrel DSA5 Dice Roller
 ### Feedback
 
 If you have any suggestions or feedback, please contact me on Discord [xerberde](https://discordapp.com/users/xerberde).
