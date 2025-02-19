@@ -68,6 +68,3 @@ To install a module, follow these instructions:
 If you have any suggestions or feedback, please contact me on Discord [xerberde](https://discordapp.com/users/xerberde).
 
 
-### Credits
-Thanks to [jopeek](https://github.com/jopeek/fvtt-simple-dice-roller/) for providing ideas and base code.
-
